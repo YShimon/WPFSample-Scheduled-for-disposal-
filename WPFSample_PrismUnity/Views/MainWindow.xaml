@@ -4,7 +4,46 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="{Binding Title}" Height="350" Width="525">
+
+    <Window.Resources>
+        <Style x:Key="SampleGridButton" TargetType="DataGridCell">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Button 
+                            Content="実行" 
+                            Command="{Binding Path=DataContext.ExecuteSample,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}"
+                            CommandParameter="{Binding}" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        <ContentControl prism:RegionManager.RegionName="ContentRegion" />
+        <ContentControl prism:RegionManager.RegionName="ContentRegion"/>
+
+        <DataGrid 
+            ItemsSource="{Binding Items}"
+            AutoGenerateColumns="False"
+            IsReadOnly="True"
+            SelectionMode="Single"
+            SelectionUnit="Cell"
+            Margin="50,10,50,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn     
+                    Header="ID"
+                    Width="100"
+                    Binding="{Binding Id}"/>
+                <DataGridTextColumn
+                    Header="説明"
+                    Width="*"
+                    Binding="{Binding Explanation}"/>
+                <DataGridTemplateColumn 
+                    Header="実行" 
+                    Width="100"
+                    CellStyle="{StaticResource SampleGridButton}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
