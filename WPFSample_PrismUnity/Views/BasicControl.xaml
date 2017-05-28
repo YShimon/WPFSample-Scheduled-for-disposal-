@@ -3,7 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:prism="http://prismlibrary.com/"             
              prism:ViewModelLocator.AutoWireViewModel="True">
+
+    <!--リソース定義-->
+    <Window.Resources>
+    </Window.Resources>
+
     <Grid>
-            
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="10,10,10,10">
+            <StackPanel Orientation="Vertical">
+                <!--Header-->
+                <Border BorderBrush="Gray" BorderThickness="1">
+                    <Grid Height="Auto"  Background="LightGreen">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="300"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="Control Name" VerticalAlignment="Center" Margin="10"/>
+                        <TextBlock Grid.Column="1" Text="Control"      VerticalAlignment="Center" Margin="10"/>
+                        <TextBlock Grid.Column="2" Text="Explanation"  VerticalAlignment="Center" Margin="10"/>
+                    </Grid>
+                </Border>
+                
+                <Border BorderBrush="Gray" BorderThickness="1">
+                    <Grid Height="Auto"  Background="AliceBlue">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="300"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="Button"    VerticalAlignment="Center" Margin="10"/>
+                        <Button    Grid.Column="1" Content="Button" VerticalAlignment="Center" Margin="10" Width="100" HorizontalAlignment="Left"/>
+                        <TextBlock Grid.Column="2" Text="{Binding ButtonControlExplanation.Value}" VerticalAlignment="Center" Margin="10" TextWrapping="Wrap"/>
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>
