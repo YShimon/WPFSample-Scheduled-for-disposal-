@@ -1,0 +1,16 @@
+﻿using Reactive.Bindings;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WPFSample_PrismUnity.ViewModels
+{
+    class DependancyPropertyViewModel
+    {
+        public DependancyPropertyViewModel()
+        {
+        }
+    }
+}
