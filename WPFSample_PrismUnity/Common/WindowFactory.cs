@@ -16,8 +16,9 @@ namespace WPFSample_PrismUnity.Common
             switch (viewId)
             {
                 case 0: _window = new BasicControl(); break;
+                case 1: _window = new StyleSample(); break;
                 case 3: _window = new BehaviorSample(); break;
-                case 4: _window = new DependancyProperty(); break;
+                case 4: _window = new DependencyPropertySample(); break;
                 default: break;
             }
             return _window;

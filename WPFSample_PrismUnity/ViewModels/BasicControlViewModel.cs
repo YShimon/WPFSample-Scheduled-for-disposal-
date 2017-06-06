@@ -13,6 +13,9 @@ namespace WPFSample_PrismUnity.ViewModels
         {
             {
                 "Button",
+                "Clickイベントに反応するWindowsボタンコントロールを表します。" + Environment.NewLine +
+                "<Button>タグを使用します。" + Environment.NewLine + 
+                "使用例" + Environment.NewLine +
                 "<Button Grid.Column=\"1\" Content=\"Button\" VerticalAlignment=\"Center\" Margin=\"10\" Width=\"100\" HorizontalAlignment=\"Left\"/>"
             },
         };
