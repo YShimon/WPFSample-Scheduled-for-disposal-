@@ -1,0 +1,63 @@
+﻿<Window x:Class="WPFSample_PrismUnity.Views.StyleSample"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True">
+
+    <Window.Resources>
+        <Style x:Key="SampleButtonStyle01" TargetType="Button">
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="10,10,10,10"/>
+            <Setter Property="Content" Value="ボタン(Resource記載のStyle)"/>
+        </Style>
+
+        <ControlTemplate x:Key="SampleControlTemplate01" TargetType="Button">
+            <Border Background="LightGreen" CornerRadius="10" Padding="10">
+                <TextBlock Text="テンプレート" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+    </Window.Resources>
+
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <!--プロパティを直接指定-->
+            <StackPanel Orientation="Horizontal">
+                <Button Content="スタイルなしボタン"/>
+                <TextBlock Text="プロパティが設定されていないボタン" VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="幅(250)、高さ(30)を設定したボタン" Width="250" Height="30"/>
+                <TextBlock Text="Width,Heightが設定されたボタン" VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="ボタン(Margineの設定追加版)" Width="250" Height="30" Margin="10,10,10,10"/>
+                <TextBlock Text="Width,Height,Margineが設定されたボタン" VerticalAlignment="Center"/>
+            </StackPanel>
+            <!--スタイル直接定義-->
+            <StackPanel Orientation="Horizontal">
+                <Button>
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Width" Value="250"/>
+                            <Setter Property="Height" Value="30"/>
+                            <Setter Property="Margin" Value="10,10,10,10"/>
+                            <Setter Property="Content" Value="ボタンタグに直接記載"/>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <TextBlock Text="Styleが設定されたボタン(タグにスタイルを記載)" VerticalAlignment="Center"/>
+            </StackPanel>
+            <!--リソースのスタイルを利用する場合-->
+            <StackPanel Orientation="Horizontal">
+                <Button Style="{StaticResource SampleButtonStyle01}"/>
+                <TextBlock Text="Styleが設定されたボタン(ResourceのStyleを利用)" VerticalAlignment="Center"/>
+            </StackPanel>
+            <!--リソースのスタイル/テンプレートを利用する場合-->
+            <StackPanel Orientation="Horizontal">
+                <Button Style="{StaticResource SampleButtonStyle01}" Template="{StaticResource SampleControlTemplate01}"/>
+                <TextBlock Text="Style/Templateが設定されたボタン(ResourceのStyleを利用)" VerticalAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

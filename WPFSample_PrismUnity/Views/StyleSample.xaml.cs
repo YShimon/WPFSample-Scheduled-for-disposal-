@@ -3,11 +3,11 @@
 namespace WPFSample_PrismUnity.Views
 {
     /// <summary>
-    /// Interaction logic for DependancyProperty.xaml
+    /// Interaction logic for StyleSample.xaml
     /// </summary>
-    public partial class DependancyProperty : Window
+    public partial class StyleSample : Window
     {
-        public DependancyProperty()
+        public StyleSample()
         {
             InitializeComponent();
         }
