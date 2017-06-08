@@ -9,7 +9,7 @@ namespace WPFSample_PrismUnity
     {
         protected override DependencyObject CreateShell()
         {
-            return Container.Resolve<MainWindow>();
+            return Container.Resolve<Shell>();
         }
 
         protected override void InitializeShell()
