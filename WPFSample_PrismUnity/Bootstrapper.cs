@@ -15,8 +15,8 @@ namespace WPFSample_PrismUnity
 
         protected override void InitializeShell()
         {
-            //Application.Current.MainWindow.Show();
-            ((Window)this.Shell).Show();
+            Application.Current.MainWindow.Show();
+            //((Window)this.Shell).Show();
         }
 
         protected override void ConfigureModuleCatalog()
@@ -25,6 +25,11 @@ namespace WPFSample_PrismUnity
 
             //var moduleCatalog = (ModuleCatalog)this.ModuleCatalog;
             //moduleCatalog.AddModule(typeof(HelloWorldModule.HelloWorldModule));
+        }
+
+        protected override IModuleCatalog CreateModuleCatalog()
+        {
+            return base.CreateModuleCatalog();
         }
     }
 }

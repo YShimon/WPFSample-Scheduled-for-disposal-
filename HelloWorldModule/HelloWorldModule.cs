@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Practices.Unity;
+﻿using HelloWorldModule.Views;
 using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Prism.Regions;
-using HelloWorldModule.Models;
-using HelloWorldModule.Views;
 
 namespace HelloWorldModule
 {
@@ -15,10 +8,8 @@ namespace HelloWorldModule
     {
         //[Dependency]
         //public IUnityContainer Container { get; set; }
-        
-        [Dependency]
-        public IRegionManager RegionManager { get; set; }
 
+        private readonly IRegionManager RegionManager;
         public HelloWorldModule(IRegionManager regionManager)
         {
             this.RegionManager = regionManager;
@@ -30,7 +21,7 @@ namespace HelloWorldModule
             //this.Container.RegisterType<object, HelloWorld>(nameof(HelloWorld));
 
             //this.RegionManager.RequestNavigate("ContentRegion", nameof(HelloWorld));
-            RegionManager.RegisterViewWithRegion("ContentRegion", typeof(HelloWorld));
+            RegionManager.RegisterViewWithRegion("ContentRegion", typeof(Views.HelloWorldView));
         }
     }
 }

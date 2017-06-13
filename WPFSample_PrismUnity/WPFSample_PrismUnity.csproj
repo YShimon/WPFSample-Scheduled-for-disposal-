@@ -206,12 +206,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HelloWorldModule\HelloWorldModule.csproj">
-      <Project>{72e340bc-9874-49b7-b115-461e9c14f31e}</Project>
-      <Name>HelloWorldModule</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
