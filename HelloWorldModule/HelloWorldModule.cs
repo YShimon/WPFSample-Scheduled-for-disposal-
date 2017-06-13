@@ -1,27 +1,26 @@
 ﻿using HelloWorldModule.Views;
-using Microsoft.Practices.Prism.Modularity;
-using Microsoft.Practices.Prism.Regions;
+using Prism.Modularity;
+using Prism.Regions;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace HelloWorldModule
 {
     public class HelloWorldModule : IModule
     {
-        //[Dependency]
-        //public IUnityContainer Container { get; set; }
+        IRegionManager _regionManager;
 
-        private readonly IRegionManager RegionManager;
-        public HelloWorldModule(IRegionManager regionManager)
+        public HelloWorldModule(RegionManager regionManager)
         {
-            this.RegionManager = regionManager;
+            _regionManager = regionManager;
         }
 
         public void Initialize()
         {
-            //this.Container.RegisterType<MessageProvider>(new ContainerControlledLifetimeManager());
-            //this.Container.RegisterType<object, HelloWorld>(nameof(HelloWorld));
-
-            //this.RegionManager.RequestNavigate("ContentRegion", nameof(HelloWorld));
-            RegionManager.RegisterViewWithRegion("ContentRegion", typeof(Views.HelloWorldView));
+            _regionManager.RegisterViewWithRegion("ContentRegion", typeof(HelloWorldView));
         }
     }
 }
