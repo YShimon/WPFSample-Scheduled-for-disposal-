@@ -58,6 +58,48 @@
                 <Button Style="{StaticResource SampleButtonStyle01}" Template="{StaticResource SampleControlTemplate01}"/>
                 <TextBlock Text="Style/Templateが設定されたボタン(ResourceのStyleを利用)" VerticalAlignment="Center"/>
             </StackPanel>
+            <!--リソースのスタイル/テンプレートを利用する場合-->
+            <!--<StackPanel Orientation="Horizontal" Height="100">
+                <Button x:Name="StandardPosButton" Style="{StaticResource SampleButtonStyle01}" Content="Popup基準コントロール" Width="50" Margin="50,0,50,0"/>
+                <Popup 
+                    IsOpen="True" 
+                    PlacementTarget="{Binding ElementName=StandardPosButton}" 
+                    Placement="Left"
+                    Width="20" Height="20">
+                    <Grid Background="Green"/>
+                </Popup>
+                <Popup 
+                    IsOpen="True" 
+                    PlacementTarget="{Binding ElementName=StandardPosButton}" 
+                    Placement="Top"
+                    Width="20" Height="20">
+                    <Grid Background="Blue"/>
+                </Popup>
+                <Popup 
+                    IsOpen="True" 
+                    PlacementTarget="{Binding ElementName=StandardPosButton}" 
+                    Placement="Right"
+                    Width="20" Height="20">
+                    <Grid Background="Red"/>
+                </Popup>
+                <Popup 
+                    IsOpen="True" 
+                    PlacementTarget="{Binding ElementName=StandardPosButton}" 
+                    Placement="Bottom"
+                    Width="20" Height="20">
+                    <Grid Background="Yellow"/>
+                </Popup>
+                <Popup 
+                    IsOpen="True"
+                    PlacementTarget="{Binding ElementName=StandardPosButton}" 
+                    Placement="Center"
+                    Width="40" Height="40">
+                    <Border CornerRadius="10" Background="Yellow" Padding="10" Opacity="0.8" BorderBrush="White">
+                        <Grid Background="Purple" Margin="-10,0"/>
+                    </Border>
+                </Popup>
+                <TextBlock Text="Popupの位置(windowには追従しない)" VerticalAlignment="Center"/>
+            </StackPanel>-->
         </StackPanel>
     </Grid>
 </Window>
