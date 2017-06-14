@@ -5,7 +5,7 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="{Binding Title}" Height="350" Width="525">
 
-    <!--<Window.Resources>
+    <Window.Resources>
         <Style x:Key="SampleGridButton" TargetType="DataGridCell">
             <Setter Property="Template">
                 <Setter.Value>
@@ -18,32 +18,33 @@
                 </Setter.Value>
             </Setter>
         </Style>
-    </Window.Resources>-->
+    </Window.Resources>
 
     <Grid>
-        <ContentControl prism:RegionManager.RegionName="ContentRegion"/>
-
-        <!--<DataGrid 
+        <StackPanel>
+            <ContentControl prism:RegionManager.RegionName="ContentRegion"/>
+            <DataGrid 
             ItemsSource="{Binding Items}"
             AutoGenerateColumns="False"
             IsReadOnly="True"
             SelectionMode="Single"
             SelectionUnit="Cell"
             Margin="50,10,50,10">
-            <DataGrid.Columns>
-                <DataGridTextColumn     
+                <DataGrid.Columns>
+                    <DataGridTextColumn     
                     Header="ID"
                     Width="100"
                     Binding="{Binding Id}"/>
-                <DataGridTextColumn
+                    <DataGridTextColumn
                     Header="説明"
                     Width="*"
                     Binding="{Binding Explanation}"/>
-                <DataGridTemplateColumn 
+                    <DataGridTemplateColumn 
                     Header="実行" 
                     Width="100"
                     CellStyle="{StaticResource SampleGridButton}"/>
-            </DataGrid.Columns>
-        </DataGrid>-->
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
     </Grid>
 </Window>
