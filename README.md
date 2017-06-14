@@ -1,7 +1,14 @@
-# WPFSample Prism Unity版
+# WPFSample(Prism Unity版)
 
- WPF Sampleのサンプルコード(Prism版)です。
- XAMLのコントロール、バインディング様々な機能のサンプルコードです。
+WPF(Prism.Unity)のSample Code(Prism版)です。  
+このSampleでは、
+
+- Unityを使ったモジュール  
+- WPF Control  
+- Property Command Binding  
+- Behavior  
+
+等のサンプルコード(作成中)です。
 
 [](Description)
 [](概要だけでは伝わらない場合にもう少し丁寧な説明)
@@ -35,8 +42,8 @@
 [](Contribution)
 [](どうやって参加するのか？)
 
-[](Licence)
-[](ライセンス・まだ考えてない)
+## Licence
+特に考えてない  
 
 ## Author
 Y.Shimone

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HelloWorldModule.Properties
+namespace WpfCommonModule.Properties
 {
 
 
