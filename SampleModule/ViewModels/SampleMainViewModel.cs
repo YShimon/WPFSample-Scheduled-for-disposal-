@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Prism.Commands;
 using Prism.Mvvm;
-using Reactive.Bindings;
-using WPFSample_PrismUnity.Common;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace WPFSample_PrismUnity.ViewModels
+namespace SampleModule.ViewModels
 {
-    public class MainWindowViewModel : BindableBase
+    public class SampleMainViewModel : BindableBase
     {
         public class SampleInfo
         {
@@ -48,5 +49,6 @@ namespace WPFSample_PrismUnity.ViewModels
             Console.WriteLine($"DoSample : {((SampleInfo)x).Id} , {((SampleInfo)x).Explanation}");
             SampleNavigator.ShowDialog(((SampleInfo)x).Id);
         };
+    }
     }
 }
