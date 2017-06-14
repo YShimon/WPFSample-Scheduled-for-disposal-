@@ -207,9 +207,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HelloWorldModule\HelloWorldModule.csproj">
-      <Project>{c6ee1bba-6d43-4d09-84ef-364c5def93a4}</Project>
-      <Name>HelloWorldModule</Name>
+    <ProjectReference Include="..\SampleModule\SampleModule.csproj">
+      <Project>{052b07a5-eef3-4bc2-bd96-508b3f70ebf5}</Project>
+      <Name>SampleModule</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

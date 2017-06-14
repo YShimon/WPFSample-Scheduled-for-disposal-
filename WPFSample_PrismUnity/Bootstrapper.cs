@@ -24,7 +24,7 @@ namespace WPFSample_PrismUnity
             base.ConfigureModuleCatalog();
 
             var moduleCatalog = (ModuleCatalog)this.ModuleCatalog;  
-            moduleCatalog.AddModule(typeof(HelloWorldModule.HelloWorldModule));
+            moduleCatalog.AddModule(typeof(SampleModule.SampleModule));
         }
 
         protected override IModuleCatalog CreateModuleCatalog()
